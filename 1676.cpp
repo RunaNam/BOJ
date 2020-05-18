@@ -27,4 +27,11 @@ int main(void)
 {
     int ans = 0;
     int n;
+    scanf("%d", &n);
+    for (int i =5; i<= n; i*= 5){
+        ans += n/i;
+    }
+    
+    printf("%d", ans);
+    return 0;
 }
