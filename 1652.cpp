@@ -6,15 +6,14 @@ int room[101][101] = {
     0,
 };
 
-void check()
+int check()
 {
     int mycount, vcount, hcount;
-    vcount = 0;
-    hcount = 0;
 
     for (int i = 0; i < n; i++)
     {
         mycount = 0;
+        vcount = 0;
         for (int j = 0; j < n; j++)
         {
             if (room[i][j])
@@ -31,6 +30,7 @@ void check()
     for (int i = 0; i < n; i++)
     {
         mycount = 0;
+        hcount = 0;
         for (int j = 0; j < n; j++)
         {
             if (room[j][i])
@@ -43,16 +43,14 @@ void check()
             }
         }
     }
-    printf("%d %d", vcount, hcount);
+    printf("%d %d", hcount, vcount);
 }
 
-int main()
+main()
 {
     scanf("%d", &n);
     for (int i = 0; i < n; i++)
     {
-        char b;
-        scanf("%c", &b);
         for (int j = 0; j < n; j++)
         {
             char a;
